@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#141414] text-white;
+  }
+
+  header {
+    @apply fixed;
+  }
+}
+
+@layer components {
+  .headerlink {
+    @apply cursor-pointer text-sm text-[#e5e5e5] font-light transition duration-[0.4s] hover:text-[#b3b3b3];
+  }
+}
