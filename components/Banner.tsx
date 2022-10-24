@@ -21,8 +21,8 @@ const Banner = ({ nigthMovieOriginals }: Props) => {
   }, [nigthMovieOriginals]);
 
   return (
-    <div className="flex flex-col space-y-2 py-16 md:space-y-4 lg:h-[80vh] lg:justify-end lg:pb-10">
-      <div className="absolute top-0 left-0 h-[95vh] w-screen -z-10">
+    <div className="flex flex-col space-y-2 py-16 md:space-y-4 lg:h-[100vh] lg:justify-end lg:pb-10">
+      <div className="absolute top-0 left-0 h-[130vh] w-full -z-10">
         <Image
           src={`https://image.tmdb.org/t/p/original${
             movie?.backdrop_path || movie?.poster_path

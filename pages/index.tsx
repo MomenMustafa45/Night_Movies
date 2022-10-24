@@ -2,6 +2,7 @@ import Head from "next/head";
 // import Image from "next/image";
 import Banner from "../components/Banner";
 import Header from "../components/Header";
+import Row from "../components/Row";
 import { Movie } from "../typings";
 import requests from "../utils/requests";
 
@@ -27,7 +28,7 @@ const Home = ({
   documentaries,
 }: Props) => {
   return (
-    <div className="relative h-screen bg-gradient-to-b from-gray-900/10 to-[#010139] lg:h-[140vh]">
+    <div className="relative h-screen bg-gradient-to-b from-gray-900/10 to-[#010139] lg:h-[140vh] scrollbar-thumb-rounded">
       <Head>
         <title>NightMovies</title>
         <link rel="icon" href="/favicon.ico" />
@@ -37,12 +38,14 @@ const Home = ({
       <Header />
       <main className="relative pl-4 pb-24 md:pl-8 lg:pl-16 lg:space-y-24">
         <Banner nigthMovieOriginals={nigthMovieOriginals} />
-        <section>
-          {/* Row */}
-          {/* Row */}
-          {/* Row */}
-          {/* Row */}
-          {/* Row */}
+        <section className="space-y-8 md:space-y-24">
+          <Row title="Trending Now" movies={trendingMovies} />
+          <Row title="Top Rated" movies={topRated} />
+          <Row title="Action Movies" movies={actionMovies} />
+          <Row title="Romance Movies" movies={romanceMovies} />
+          <Row title="Scary Movies" movies={horrorMovies} />
+          <Row title="Comedy Movies" movies={comedyMovies} />
+          <Row title="Documentaries" movies={documentaries} />
         </section>
       </main>
       {/* Modal */}
