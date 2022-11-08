@@ -31,6 +31,7 @@ const Home = ({
     <div className="relative h-screen bg-gradient-to-b from-gray-900/10 to-[#010139] lg:h-[140vh] scrollbar-thumb-rounded">
       <Head>
         <title>NightMovies</title>
+        <meta charSet="utf-8" />
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="This is a website for movies" />
       </Head>
