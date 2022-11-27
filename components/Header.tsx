@@ -27,7 +27,9 @@ const Header = () => {
     >
       <div className="flex space-x-4 md:space-x-6 items-center">
         <div className="bg-[#fe921f]/50 text-[#ffffff] inline-block font-bold text-sm leading-3 tracking-wider mx-0 my-30 px-4 py-4 uppercase rounded-tr-lg cursor-pointer hover:text-[#141414] transition-all duration-700 ">
-          <p className="opacity-[0.8]">Night Movies</p>
+          <Link href="/">
+            <p className="opacity-[0.8]">Night Movies</p>
+          </Link>
         </div>
         <ul className="hidden space-x-4 md:flex md:space-x-6">
           <li className="headerlink">Home</li>

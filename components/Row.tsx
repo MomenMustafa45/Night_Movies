@@ -6,8 +6,9 @@ import Thumbnail from "./Thumbnail";
 interface Props {
   title: string;
   movies: Movie[];
+  handleShow: any;
 }
-const Row = ({ title, movies }: Props) => {
+const Row = ({ title, movies, handleShow }: Props) => {
   const [isMoved, setIsMoved] = useState(false);
 
   const rowDivEl = useRef<HTMLDivElement>(null);
@@ -49,7 +50,11 @@ const Row = ({ title, movies }: Props) => {
           ref={rowDivEl}
         >
           {movies.map((movie) => (
-            <Thumbnail key={movie.id} movie={movie} />
+            <Thumbnail
+              key={movie.id}
+              movie={movie}
+              handleShowModal={() => handleShow(movie)}
+            />
           ))}
           <ChevronRightIcon
             className="absolute top-0 bottom-0 m-auto h-9 w-9 md:h-12 md:w-12 right-2 z-40 cursor-pointer hover:scale-125 opacity-0 transition group-hover:opacity-100"
